@@ -1,0 +1,24 @@
+{
+  "deploymentEnvironment": [
+    {
+      "name": "PRODUCTION",
+      "path": "//",
+      "npmScript": "npm run build:production"
+    },
+    {
+      "name": "DEVELOPMENT",
+      "path": "//",
+      "npmScript": "npm run build:development"
+    },
+    {
+      "name": "STAGING",
+      "path": "//",
+      "npmScript": "npm run build:staging"
+    },
+    {
+      "name": "TEST",
+      "npmScript": "npm run build:staging",
+      "path": "diego:0010@192.168.0.188:/tmp"
+    }
+  ]
+}
