@@ -8,6 +8,9 @@ var inquirer = require("inquirer");
 var tooFile = require("../too.json");
 var client = require('scp2')
 
+// TODO: Utilizar pacote abaixo para validação da versão de publicação do pacote.
+// https://www.npmjs.com/package/semver
+
 //console.log("tooFile.deploymentEnvironment", tooFile.deploymentEnvironment)
 const listaDeAmbientesPublicacao = tooFile.deploymentEnvironment.map(x => {
   return {
@@ -33,7 +36,20 @@ const exec = util.promisify(require("child_process").exec);
 async function changePackageVersion(args) {
   let packageStrComand = "npm version patch";
 
+
   switch (args.semanticVersion[0]) {
+  
+    //TODO: Da suporte a mais cases
+    //https://github.com/angular/angular-cli/blob/a355e7d693a8a74b2010e18f67cfd86207a9eac7/scripts/release.ts#L123
+    // case 'major-beta':
+    // case 'major-rc':
+    // case 'minor-beta':
+    // case 'minor-rc':
+    // case 'major':
+    // case 'minor':
+    // case 'patch':
+  
+  
     case "MAJOR":
       packageStrComand = "npm version major";
       break;
