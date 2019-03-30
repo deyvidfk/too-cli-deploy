@@ -33,6 +33,11 @@ console.log("listaDeAmbientesPublicacao", buildChoiceFor());
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 
+
+
+
+// --tag=<name>. Publica sob o npm dist-tag especificado.
+//https://docs.npmjs.com/cli/dist-tag
 async function changePackageVersion(args) {
   let packageStrComand = "npm version patch";
 
