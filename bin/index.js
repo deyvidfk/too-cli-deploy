@@ -8,6 +8,10 @@ var inquirer = require("inquirer");
 var tooFile = require("../too.json");
 var client = require('scp2')
 
+// TODO: Use a biblioteca abaixo para obter argumentos de linha de webkitConvertPointFromPageToNode. 
+// Referencia: https://github.com/angular/angular-cli/blob/master/bin/devkit-admin
+// https://www.npmjs.com/package/minimist
+
 // TODO: Utilizar pacote abaixo para validação da versão de publicação do pacote.
 // https://www.npmjs.com/package/semver
 
